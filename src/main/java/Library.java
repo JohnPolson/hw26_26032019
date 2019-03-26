@@ -18,7 +18,11 @@ public class Library {
         if (this.tallyOfBooks() < this.capacity) {
             this.books.add(book);
         }
+    }
 
+    public Book removeBook() {
+        this.books.remove(0);
+        return null;
     }
 
 }

@@ -22,6 +22,17 @@ public class LibraryTest {
         }
 
         @Test
+        public void checkRemoveBook() {
+            library.addBook(book);
+            library.addBook(book);
+            library.addBook(book);
+
+            library.removeBook();
+
+            assertEquals(2, library.tallyOfBooks());
+        }
+
+        @Test
         public void checkMaxCapacity() {
             library = new Library(5);
 
